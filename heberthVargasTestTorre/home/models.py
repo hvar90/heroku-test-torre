@@ -1,9 +1,6 @@
 
 
-class PalindromeBinary(object) :
-	def __init__(self,) :	  
-	   self._num_cicles=0
-	   
+class PalindromeBinary(object) :	
 	def get_palindrome_list(self,x=1,y=1000001):
 		self._num_cicles=0
 		is_palindrome=self._is_palindrome
