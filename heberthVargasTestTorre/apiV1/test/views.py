@@ -1,8 +1,8 @@
-from rest_framework.views	         import APIView
-from rest_framework					 import status
-from rest_framework.response		 import Response
-from home.models                     import PalindromeBinary
-from json import dumps
+from rest_framework.views	import APIView
+from rest_framework		import status
+from rest_framework.response	import Response
+from home.models                import PalindromeBinary
+from json                       import dumps
 
 class ValidationError(Exception):
 	pass
