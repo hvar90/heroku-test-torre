@@ -20,10 +20,13 @@ class PalindromeBinary(object) :
 		
 	def _is_palindrome(self,word):
 		inverseWord = word[::-1]
+		num_cycles=self._num_cycles
 		for index,letter in enumerate(word) :
-			self._num_cycles+=1
+			num_cycles+=1
 			if inverseWord[index] != letter:
+				self._num_cycles=num_cycles
 				return False 
+		self._num_cycles=num_cycles
 		return True
 		
 		
