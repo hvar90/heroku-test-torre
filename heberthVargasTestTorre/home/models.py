@@ -8,7 +8,7 @@ class PalindromeBinary(object) :
 				  if is_palindrome(bin(num)[2:])]
 		complexity="{0}*O({1})".format(
 						(y-x), len(str(bin((y))[2:])))	
-		"""la complejida esta dada por el tamano del mayor numero en binario
+		"""la complejidad esta dada por el tamano del mayor numero en binario
 		osea len((bin(y)) esto se multiplica por la cantidad de
 		numeros totales a analizar osea (y-x)"""	  
 		return {"total_palindromes":len(result),
