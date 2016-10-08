@@ -1,7 +1,7 @@
 
 
 class PalindromeBinary(object) :	
-	def get_palindrome_list(self,x=1,y=1000001):
+	def get_palindrome_list(self,x,y):
 		global num_cycles
 		num_cycles=0
 		is_palindrome=self._is_palindrome
