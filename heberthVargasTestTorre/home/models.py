@@ -5,7 +5,7 @@ class PalindromeBinary(object) :
 		self._num_cicles=0
 		is_palindrome=self._is_palindrome
 		result=[num for num in xrange(x,y)
-				  if is_palindrome(bin(num)[2:]) ]
+				  if is_palindrome(bin(num)[2:])]
 		complexity="{0}*O({1})".format(
 						(y-x), len(str(bin((y))[2:])))	
 		"""la complejida esta dada por el tamano del mayor numero en binario
