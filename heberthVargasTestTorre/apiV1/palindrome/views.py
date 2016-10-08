@@ -11,7 +11,7 @@ class PalindromeView(APIView):
 	def get(self, request,x,y, *args, **kwargs):	
 		try:			
 			result =dumps(
-					PalindromeBinary().get_palindrome_list(int(x),int(y))) 
+					PalindromeBinary().get_palindrome_list(int(x),int(y)+1)) 
 		except ValidationError as e:
 			return Response(
 					{"detail": e.message},status.HTTP_400_BAD_REQUEST, )	   
