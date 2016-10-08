@@ -11,7 +11,7 @@ events {
 http {
 	gzip on;
 	gzip_comp_level 2;
-	gzip_min_length 512;  		
+	gzip_min_length 100;  		
 	gzip_types       text/plain application/xml application/json;
 	server_tokens off;
 	add_header Access-Control-Allow-Origin *;
