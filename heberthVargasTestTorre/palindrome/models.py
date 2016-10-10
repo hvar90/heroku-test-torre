@@ -1,8 +1,9 @@
 class PalindromeBinary(object) :	
 	
-	def get_palindrome_list(self,x,y):			
+	def get_palindrome_list(self,x,y):		
+		is_palindrome=self._is_palindrome
 		result=[num for num in xrange(x,y)
-				  if lambda x: x[::-1]==x (bin(num)[2:]) ]
+				  if is_palindrome(bin(num)[2:])]
 		complexity="O({0})".format(y-x)	
 		"""la complejidad  esta dada  por la cantidad de
 		numeros totales a analizar osea (y-x)
@@ -12,7 +13,8 @@ class PalindromeBinary(object) :
 				"total_cycles":y-x,
 				"complexity": complexity}	
 		
-
+	def _is_palindrome(self,word):						
+		return word[::-1]==word
 		
 		
 		
