@@ -5,7 +5,7 @@ class PalindromeBinary(object) :
 		result=list(self._make_gen(x,y))	
 		complexity="O({0})".format(self.num_cycles)
 		"""la complejidad  esta dada  por la cantidad de
-		numeros numeros palindromes que hay contando desde el numero cero
+		numeros palindromes que hay contando desde el numero cero
 		hasta el numero superior del rango dado
 		osea tiene una complejidad lineal O(n)"""		  
 		return {"total_palindromes":len(result),
@@ -16,6 +16,7 @@ class PalindromeBinary(object) :
 	def _make_gen(self,start,end):
 		gen=self._palgen_base2()	
 		while True:
+			self.num_cycles+=1	
 			pal=next(gen)			
 			if start<=pal<=end:
 				yield pal
@@ -29,6 +30,7 @@ class PalindromeBinary(object) :
 		yield 0
 		x, n, n2 = 1, 1, 2		
 		while True:
+			self.num_cycles+=1	
 			for y in range(n, n2):
 				s = format(y, 'b')
 				self.num_cycles+=1			
