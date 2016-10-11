@@ -6,9 +6,9 @@
 	en el rango de numeros para obtener numeros palindromos
 	entonces la complejidad es O(log (y-x))	
 	por ultimo si npal= numero total de palindromos en nuestro rango
-	entonces a esto se le suma los ciclos de nuestros 2 ciclos While
-	cada ciclo while es aproximadamente igual a la mitad 
-	del total de numeros palindromos npal/2, por ser valores
+	entonces a esto se le suma los ciclos de nuestros 2 ciclos While,
+	cada ciclo while es menos de la mitad 
+	del total de numeros palindromos y por ser valores
 	pequenos no afectan mucho a la complejidad del programa"""		  
 class PalindromeBinary(object) :	
 	
