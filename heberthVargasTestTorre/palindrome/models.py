@@ -35,8 +35,7 @@ class PalindromeBinary(object) :
 				yield int(s+s[-2::-1], 2)
 			for y in range(n, n2):
 				s = format(y, 'b')
-				self.num_cycles+=1
-				
+				self.num_cycles+=1				
 				yield int(s+s[::-1], 2)
 			x += 1
 			n *= 2
