@@ -13,17 +13,17 @@
 class PalindromeBinary(object) :	
 	
 	def get_palindrome_list(self,x,y):		
-		self.num_cycles=0
+		self._num_cycles=0
 		result=list(self._make_gen(x,y))	
-		complexity="{0}+O(log {1})".format(self.num_cycles-len(result),y-x)		
+		complexity="{0}+O(log {1})".format(self._num_cycles-len(result),y-x)		
 		return {"total_palindromes":len(result),
 				"list_palindrome":result,
-				"total_cycles":self.num_cycles,
+				"total_cycles":self._num_cycles,
 				"complexity": complexity}	
 		
 	def _make_gen(self,start,end):	
 		for pal in self._palgen_base2()	:	
-			self.num_cycles+=1				
+			self._num_cycles+=1				
 			if start<=pal<=end:
 				yield pal
 			elif pal>end:
