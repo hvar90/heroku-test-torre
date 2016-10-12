@@ -21,11 +21,9 @@ class PalindromeBinary(object) :
 				"total_cycles":self.num_cycles,
 				"complexity": complexity}	
 		
-	def _make_gen(self,start,end):
-		gen=self._palgen_base2()	
-		while True:
-			self.num_cycles+=1	
-			pal=next(gen)			
+	def _make_gen(self,start,end):	
+		for pal in self._palgen_base2()	:	
+			self.num_cycles+=1				
 			if start<=pal<=end:
 				yield pal
 			elif pal>end:
