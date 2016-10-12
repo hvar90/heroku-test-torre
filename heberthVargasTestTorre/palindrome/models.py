@@ -16,10 +16,10 @@ class PalindromeBinary(object) :
 		self._num_cycles=0
 		result=list(self._make_gen(x,y))	
 		complexity="{0}+O(log {1})".format(self._num_cycles-len(result),y-x)		
-		return {"total_palindromes":len(result),
-				"list_palindrome":result,
+		return {"total_palindromes":len(result),			
 				"total_cycles":self._num_cycles,
-				"complexity": complexity}	
+				"complexity": complexity,
+				"list_palindrome":result,}	
 		
 	def _make_gen(self,start,end):	
 		for pal in self._palgen_base2()	:	
