@@ -36,14 +36,14 @@ class PalindromeBinary(object) :
 		yield 0
 		x, n, n2 = 1, 1, 2		
 		while True:
-			self.num_cycles+=1	
+			self._num_cycles+=1	
 			for y in xrange(n, n2):
 				s = format(y, 'b')
-				self.num_cycles+=1			
+				self._num_cycles+=1			
 				yield int(s+s[-2::-1], 2)
 			for y in xrange(n, n2):
 				s = format(y, 'b')
-				self.num_cycles+=1				
+				self._num_cycles+=1				
 				yield int(s+s[::-1], 2)
 			x += 1
 			n *= 2
