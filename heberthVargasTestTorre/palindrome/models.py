@@ -23,8 +23,9 @@ class PalindromeBinary(object) :
 		
 	def _make_gen(self,start,end):	
 		for pal in self._palgen_base2()	:	
-			self._num_cycles+=1				
-			if start<=pal<=end:
+			self._num_cycles+=1		
+			str_pal= str(pal)				
+			if start<=pal<=end and str_pal[::-1] == str_pal :
 				yield pal
 			elif pal>end:
 				 break   
